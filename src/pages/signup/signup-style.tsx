@@ -7,93 +7,163 @@ import {
 
 const $eqWh = (Dimensions.get('screen').width - 54) / 2;
 export const style = StyleSheet.create({
+  //  mainContainer: {
+  //   flex:1,
+  //   paddingHorizontal:wp(10),
+  //   backgroundColor:"#fff"
+  //  },
+  //  logo: {
+  //   height:92,
+  //   width:262,
+  //   marginTop:hp(10),
+  //   marginLeft:-wp(4)
+  //  },
+  //  screenTitle: {
+  //    fontSize:38,
+  //    fontWeight:"bold",
+  //    color:"#3C4253"
+  //  },
+  //  screenNote: {
+  //   fontSize:32,
+  //   fontWeight:"bold",
+  //   color:"lightgrey",
+  //   marginBottom:hp(8)
+  // },
+  // screenNote1: {
+  //   fontSize:26,
+  //   fontWeight:"bold",
+  //   color:"lightgrey",
+  //   marginBottom:hp(5),
+  //   marginTop:hp(2)
+  // },
+  // textInputStyle: {
+  //   height:hp(7),
+  //   width:wp(75),
+  //   borderBottomWidth:2,
+  //   marginTop:hp(3),
+  //   borderColor:"lightgrey",
+  //   fontSize:16,
+  //   fontWeight:"bold"
+  // },
+  // nextButton : {
+  //   height:hp(8),
+  //   width:wp(35),
+  //   borderRadius:hp(4),
+  //   backgroundColor:"#3C4253",
+  //   marginTop:hp(13),
+  //   justifyContent:"center",
+  //   alignItems:"center",
+  //   elevation:3
+  // },
+  // nextButton1 : {
+  //   // height:hp(8),
+  //   // width:wp(35),
+  //   // borderRadius:hp(4),
+  //   //marginTop:hp(6),
+  //   // justifyContent:"center",
+  //   // alignItems:"center"
+  // },
+  // footer: {
+  //   fontSize:18,
+  //   fontWeight:"bold",
+  //   color:"lightgrey",
+  //   marginTop:hp(5)
+  // },
+  // footerTag: {
+  //   color:"#3C4253",
+  //   fontSize:18,
+  //   fontWeight:"bold"
+  // },
+
    mainContainer: {
     flex:1,
-    paddingHorizontal:wp(10),
+   // paddingHorizontal:wp(10),
     backgroundColor:"#fff"
    },
    logo: {
     height:92,
     width:262,
-    marginTop:hp(10),
-    marginLeft:-wp(4)
+    marginLeft:47,
+    marginTop:130
    },
    screenTitle: {
-     fontSize:38,
-     fontWeight:"bold",
-     color:"#3C4253"
+     fontSize:42,
+     //fontWeight:"bold",
+     color:"#3C4253",
+     marginLeft:65,
+     marginTop:22,
+     fontFamily:"Gilroy-Bold"
    },
    screenNote: {
-    fontSize:32,
-    fontWeight:"bold",
-    color:"lightgrey",
-    marginBottom:hp(8)
+    fontSize:30,
+    fontFamily:"Gilroy-Medium",
+    color:"#C0C5D1",
+    marginLeft:65,
+    marginTop:15,
   },
   screenNote1: {
-    fontSize:26,
-    fontWeight:"bold",
-    color:"lightgrey",
-    marginBottom:hp(5),
-    marginTop:hp(2)
+    fontSize:24,
+    fontFamily:"Gilroy-Medium",
+    color:"#C0C5D1",
+    marginTop:18
   },
   textInputStyle: {
     height:hp(7),
-    width:wp(75),
+    width:wp(70),
     borderBottomWidth:2,
-    marginTop:hp(3),
+    marginLeft:66,
     borderColor:"lightgrey",
-    fontSize:16,
-    fontWeight:"bold"
+    fontSize:18,
+    fontFamily:"Gilroy-Medium",
+    marginTop:72
   },
   nextButton : {
-    height:hp(8),
-    width:wp(35),
-    borderRadius:hp(4),
+    height:70,
+    width:158,
+    borderRadius:35,
     backgroundColor:"#3C4253",
-    marginTop:hp(13),
+    marginTop:100,
+    marginLeft:65,
     justifyContent:"center",
     alignItems:"center",
-    elevation:3
+    elevation:0,
   },
-  nextButton1 : {
-    // height:hp(8),
-    // width:wp(35),
-    // borderRadius:hp(4),
-    //marginTop:hp(6),
-    // justifyContent:"center",
-    // alignItems:"center"
+  footerContainer: {
+    marginTop:63,
+    marginLeft:66,
+    marginBottom:30
   },
   footer: {
-    fontSize:18,
-    fontWeight:"bold",
+    fontSize:20,
+    fontFamily:"Gilroy-Medium",
     color:"lightgrey",
-    marginTop:hp(5)
   },
   footerTag: {
     color:"#3C4253",
-    fontSize:18,
-    fontWeight:"bold"
-  },
+    fontSize:20,
+    fontFamily:"Gilroy-Medium",
+  }, 
   profileContainer: {
     height:hp(10),
     width:wp(75),
     borderWidth:0,
-    marginTop:hp(3),
+    marginTop:30,
+    marginLeft:66,
     flexDirection:"row",
     alignItems:"center"
   },
   imageView: {
-    height:60,
-    width:60,
-    borderRadius:30,
+    height:66,
+    width:66,
+    borderRadius:33,
     backgroundColor:"lightgrey"
   },
   imageView1: {
-    height:80,
-    width:80,
-    borderRadius:40,
+    height:102,
+    width:102,
+    borderRadius:51,
     backgroundColor:"lightgrey",
-    marginTop : hp(5),
+    marginTop : 30,
     elevation:5
   },
   uploadImageTxt: {
@@ -103,33 +173,34 @@ export const style = StyleSheet.create({
   },
   modal: {
     backgroundColor:"#fff",
-    width:wp(85),
-    //height:hp(60),
+    width:350,
+    height:574,
     alignSelf:"center",
     borderRadius:hp(5),
-    paddingHorizontal:wp(10),
-    justifyContent:"center",
+    paddingHorizontal:35,
+    //justifyContent:"center",
     alignItems:"center"
   },
   modalTitle: {
     alignSelf : "center",
-    fontSize : 24,
-    fontWeight : "bold",
-    marginTop:hp(6),
-    color:"#3C4253"
+    fontSize : 30,
+    fontFamily : "Gilroy-Bold",
+    marginTop : 66,
+    color : "#3C4253"
   },
   modalTxt: {
     fontSize : 16,
-    marginTop:hp(3)
+    fontFamily: "Gilroy-Medium",
+    marginTop:29
   },
   buttonsContainer: {
     height:hp(15),
-    width:wp(65),
+    width:290,
     borderWidth:0,
     flexDirection:"row",
     alignItems:"center",
     justifyContent:"space-between",
-    marginTop:hp(5)
+    marginTop:60
   },
   buttonContainer : {
     height:hp(15),
@@ -159,7 +230,7 @@ export const style = StyleSheet.create({
     justifyContent:"center",
     alignItems:"center",
     alignSelf:"center",
-    marginTop:hp(3),
+    marginTop : 55,
     borderRadius:hp(3.5),
     marginBottom:hp(5)
   },
@@ -169,9 +240,11 @@ export const style = StyleSheet.create({
     fontWeight:"bold"
   },
   title: {
-    fontSize:16,
+    fontSize:18,
     fontWeight:"bold",
     color:"#3C4253",
+    fontFamily:"Gilroy-Medium",
+    marginTop:40
   },
   colorBoxescontainer: {
     height:hp(5),
@@ -180,11 +253,11 @@ export const style = StyleSheet.create({
     justifyContent:"space-around",
     flexDirection:"row",
     borderWidth:0,
-    marginTop:hp(5)
+    marginTop:58
   },
   colorBox: {
-    height:hp(5),
-    width:"16%",
+    height:43,
+    width:46,
     borderWidth:0,
     borderRadius:5,
     justifyContent:"center",

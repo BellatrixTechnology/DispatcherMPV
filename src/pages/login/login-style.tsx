@@ -9,54 +9,64 @@ const $eqWh = (Dimensions.get('screen').width - 54) / 2;
 export const style = StyleSheet.create({
    mainContainer: {
     flex:1,
-    paddingHorizontal:wp(10),
+   // paddingHorizontal:wp(10),
     backgroundColor:"#fff"
    },
    logo: {
     height:92,
     width:262,
-    marginTop:hp(10),
-    marginLeft:-wp(4)
+    marginLeft:47,
+    marginTop:130
    },
    screenTitle: {
-     fontSize:38,
-     fontWeight:"bold",
-     color:"#3C4253"
+     fontSize:42,
+     //fontWeight:"bold",
+     color:"#3C4253",
+     marginLeft:65,
+     marginTop:22,
+     fontFamily:"Gilroy-Bold"
    },
    screenNote: {
-    fontSize:32,
-    fontWeight:"bold",
-    color:"lightgrey",
-    marginBottom:hp(8)
+    fontSize:30,
+    fontFamily:"Gilroy-Medium",
+    color:"#C0C5D1",
+    marginLeft:65,
+    marginTop:15,
   },
   textInputStyle: {
     height:hp(7),
-    width:wp(75),
+    width:wp(70),
     borderBottomWidth:2,
-    marginTop:hp(3),
+    marginLeft:66,
     borderColor:"lightgrey",
-    fontSize:16,
-    fontWeight:"bold"
+    fontSize:18,
+    fontFamily:"Gilroy-Medium",
+    marginTop:72
   },
   nextButton : {
-    height:hp(8),
-    width:wp(35),
-    borderRadius:hp(4),
+    height:70,
+    width:158,
+    borderRadius:35,
     backgroundColor:"#3C4253",
-    marginTop:hp(13),
+    marginTop:100,
+    marginLeft:65,
     justifyContent:"center",
     alignItems:"center",
-    elevation:3
+    elevation:1,
+  },
+  footerContainer: {
+    marginTop:63,
+    marginLeft:66,
+    marginBottom:30
   },
   footer: {
-    fontSize:18,
-    fontWeight:"bold",
+    fontSize:20,
+    fontFamily:"Gilroy-Medium",
     color:"lightgrey",
-    marginTop:hp(5)
   },
   footerTag: {
     color:"#3C4253",
-    fontSize:18,
-    fontWeight:"bold"
+    fontSize:20,
+    fontFamily:"Gilroy-Medium",
   } 
   });

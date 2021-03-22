@@ -25,6 +25,7 @@ export default class SignUp extends React.Component<INavigationProps> {
           step3 : false,
           step4 : false,
           step5 : false,
+          step6 : false,
           selectedColor : "#0047FF"
         };
     } 
@@ -40,7 +41,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
     render(){
-    const {phone,phoneFormated,step1,step2,step3,step4,step5,selectedColor} = this.state
+    const {phone,phoneFormated,step1,step2,step3,step4,step5,selectedColor,step6} = this.state
         return(
             step1?
             <SafeAreaView style={style.mainContainer}>
@@ -91,9 +92,12 @@ export default class SignUp extends React.Component<INavigationProps> {
                 </TouchableOpacity>
 
 
-                <Text style={style.footer}>Don't have an Account? <TouchableOpacity
+                <TouchableOpacity
                 onPress={()=>{this.props.navigation.navigate("login")}}
-                ><Text style={style.footerTag}> Sign in</Text></TouchableOpacity></Text> 
+                style={style.footerContainer}
+                >
+                <Text style={style.footer}>Have an Account? <Text style={style.footerTag}> Sign in</Text></Text>
+                </TouchableOpacity>
                </ScrollView>
             </SafeAreaView>
 
@@ -113,7 +117,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                <Text style={style.screenNote}>Tell us who are you</Text>
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:72}]}
                 placeholder = "First Name"
                 placeholderTextColor = "lightgrey"
                 textContentType = "givenName"
@@ -122,7 +126,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "Last Name"
                 placeholderTextColor = "lightgrey"
                 textContentType = "givenName"
@@ -146,23 +150,24 @@ export default class SignUp extends React.Component<INavigationProps> {
                    </View> 
 
 
-               <View style={{ flexDirection:"row" , marginTop:hp(6), alignItems:"center"}}>
+               <View style={{ flexDirection:"row" , marginTop:86, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step1:true,step2:false})} 
-                style = {style.nextButton1}
+                style = {{}}
                 >
                 <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step3:true,step2:false})} 
-                style = {[style.nextButton,{marginTop:0,marginLeft:wp(10)}]}
+                style = {[style.nextButton,{marginTop:0,marginLeft:0}]}
                 >
                 <MaterialIcons name="arrow-forward" size={35} color={"#fff"}/>
                 </TouchableOpacity>
 
                </View>
+
                </ScrollView>
             </SafeAreaView>
 
@@ -184,7 +189,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:72}]}
                 placeholder = "Email address"
                 placeholderTextColor = "lightgrey"
                 textContentType = "emailAddress"
@@ -193,7 +198,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                 />
 
                <TextInput
-                style = {style.textInputStyle}
+                 style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "Password"
                 placeholderTextColor = "lightgrey"
                 textContentType = "password"
@@ -202,7 +207,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {style.textInputStyle}
+                 style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "Confirm Password"
                 placeholderTextColor = "lightgrey"
                 textContentType = "password"
@@ -213,18 +218,18 @@ export default class SignUp extends React.Component<INavigationProps> {
                
 
 
-               <View style={{ flexDirection:"row" , marginTop:hp(10), alignItems:"center"}}>
+                <View style={{ flexDirection:"row" , marginTop:100, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step2:true,step3:false})} 
-                style = {style.nextButton1}
+                onPress = { () => this.setState({step1:true,step2:false})} 
+                style = {{}}
                 >
                 <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step3:false,step4:true})} 
-                style = {[style.nextButton,{marginTop:0,marginLeft:wp(10)}]}
+                onPress = { () => this.setState({step4:true,step3:false})} 
+                style = {[style.nextButton,{marginTop:0,marginLeft:0}]}
                 >
                 <MaterialIcons name="arrow-forward" size={35} color={"#fff"}/>
                 </TouchableOpacity>
@@ -234,7 +239,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             </SafeAreaView>
 
             :
-
+            
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
               showsVerticalScrollIndicator={false}
@@ -250,7 +255,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:72}]}
                 placeholder = "Company name"
                 placeholderTextColor = "lightgrey"
                 textContentType = "organizationName"
@@ -258,7 +263,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                 />
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "MC number"
                 placeholderTextColor = "lightgrey"
                 keyboardType = "number-pad"
@@ -266,7 +271,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "DOT number"
                 placeholderTextColor = "lightgrey"
                 keyboardType = "number-pad"
@@ -276,27 +281,28 @@ export default class SignUp extends React.Component<INavigationProps> {
                
 
 
-               <View style={{ flexDirection:"row" , marginTop:hp(10), alignItems:"center"}}>
+                <View style={{ flexDirection:"row" , marginTop:100, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step2:true,step3:false})} 
-                style = {style.nextButton1}
+                onPress = { () => this.setState({step1:true,step2:false})} 
+                style = {{}}
                 >
                 <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step3:false,step4:true})}
-                style = {[style.nextButton,{marginTop:0,marginLeft:wp(10)}]}
+                onPress = { () => this.setState({step5:true,step4:false})} 
+                style = {[style.nextButton,{marginTop:0,marginLeft:0}]}
                 >
                 <MaterialIcons name="arrow-forward" size={35} color={"#fff"}/>
                 </TouchableOpacity>
 
-               </View>
+                </View>
+
                </ScrollView>
 
                <Modal
-               isVisible = {step4}
+               isVisible = {step5}
                animationIn="slideInUp"
                animationOut="slideOutDown"
                animationInTiming={400}
@@ -344,7 +350,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step4:false,step5:true})}
+                onPress = { () => this.setState({step5:false,step6:true})}
                 style={style.submitButton}
                 >
                 <Text style={style.submitButtonTxt}>Submit</Text>    
@@ -355,23 +361,23 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <Modal
-               isVisible = {step5}
+               isVisible = {step6}
                animationIn="slideInUp"
                animationOut="slideOutDown"
                animationInTiming={400}
                animationOutTiming={500}
                style={{flex:1,justifyContent:"center",margin:0}}
                >
-               <View style={style.modal}>
+               <View style={[style.modal,{height:600}]}>
                 
-                <Text style = {style.modalTitle}>Welcome!</Text> 
+                <Text style = {[style.modalTitle,{marginTop:25}]}>Welcome!</Text> 
 
                 <View style = {style.imageView1}></View>
 
                 <Text style = {style.screenNote1}>Asim Khurshid</Text>
 
                 <Text style={style.title}>Please select you app</Text>
-                <Text style={style.title}>theme color</Text>
+                <Text style={[style.title,{marginTop:0}]}>theme color</Text>
 
                 <View style = {style.colorBoxescontainer}>
 
@@ -485,7 +491,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                 <TouchableOpacity
                 style={style.submitButton}
                 >
-                <Text style={style.submitButtonTxt}>Submit</Text>    
+                <Text style={style.submitButtonTxt}>Save</Text>    
                 </TouchableOpacity>
                    
                </View>    

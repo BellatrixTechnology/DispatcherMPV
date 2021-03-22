@@ -33,7 +33,7 @@ export default class Login extends React.Component<INavigationProps> {
                <Text style={style.screenNote}>to start driving</Text>
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:72}]}
                 placeholder = "Email address"
                 placeholderTextColor = "lightgrey"
                 textContentType = "emailAddress"
@@ -42,7 +42,7 @@ export default class Login extends React.Component<INavigationProps> {
                 />
 
                <TextInput
-                style = {style.textInputStyle}
+                style = {[style.textInputStyle,{marginTop:30}]}
                 placeholder = "Password"
                 placeholderTextColor = "lightgrey"
                 textContentType = "password"
@@ -56,9 +56,12 @@ export default class Login extends React.Component<INavigationProps> {
                 </TouchableOpacity>
 
                
-                <Text style={style.footer}>Don't have an Account? <TouchableOpacity
+                <TouchableOpacity
                 onPress={()=>{this.props.navigation.navigate("signup")}}
-                ><Text style={style.footerTag}> Sign up</Text></TouchableOpacity></Text> 
+                style={style.footerContainer}
+                >
+                <Text style={style.footer}>Don't have an Account? <Text style={style.footerTag}> Sign up</Text></Text>
+                </TouchableOpacity> 
               </ScrollView>
             </SafeAreaView>
         )
