@@ -1,9 +1,10 @@
 import {INavigationProps} from '../../interfaces/navigation';
 import React from 'react'
-import {Text,SafeAreaView, TextInput, TouchableOpacity, Image, ScrollView} from 'react-native'
+import {Text,SafeAreaView, TextInput, TouchableOpacity, Image, ScrollView, View} from 'react-native'
 import { style } from './login-style';
 //@ts-ignore
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import { heightPercentageToDP as hp, widthPercentageToDP as wp} from 'react-native-responsive-screen';
 
 
 export default class Login extends React.Component<INavigationProps> {
@@ -20,8 +21,11 @@ export default class Login extends React.Component<INavigationProps> {
 
     render(){
         return(
+
             <SafeAreaView style={style.mainContainer}>
+
               <ScrollView
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -33,7 +37,7 @@ export default class Login extends React.Component<INavigationProps> {
                <Text style={style.screenNote}>to start driving</Text>
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:72}]}
+                style = {[style.textInputStyle,{marginTop:hp(7)}]}
                 placeholder = "Email address"
                 placeholderTextColor = "lightgrey"
                 textContentType = "emailAddress"
@@ -42,7 +46,7 @@ export default class Login extends React.Component<INavigationProps> {
                 />
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:30}]}
+                style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "Password"
                 placeholderTextColor = "lightgrey"
                 textContentType = "password"
@@ -62,7 +66,11 @@ export default class Login extends React.Component<INavigationProps> {
                 >
                 <Text style={style.footer}>Don't have an Account? <Text style={style.footerTag}> Sign up</Text></Text>
                 </TouchableOpacity> 
+
+                <View style={style.freeSpace}></View>
+
               </ScrollView>
+
             </SafeAreaView>
         )
     }  

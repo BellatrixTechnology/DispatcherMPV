@@ -46,6 +46,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             step1?
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -76,7 +77,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                 withDarkTheme
                 withShadow
                 autoFocus
-                containerStyle={[style.textInputStyle,{backgroundColor:'#ffffff00',elevation:0}]}
+                containerStyle={[style.textInputStyle,{backgroundColor:'#ffffff00',elevation:0,marginTop:hp(10)}]}
                 textInputStyle={{borderWidth:0,height:hp(7),backgroundColor:"#ffffff00"}}
                 textContainerStyle={{height:hp(7),backgroundColor:"#ffffff00"}}
                 countryPickerButtonStyle={{backgroundColor:"#ffffff00"}}
@@ -86,7 +87,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
                <TouchableOpacity
                 onPress = { () => this.setState({step2:true,step1:false})}
-                style = {style.nextButton}
+                style = {[style.nextButton,{marginTop:hp(18)}]}
                 >
                 <MaterialIcons name="arrow-forward" size={30} color={"#fff"}/>
                 </TouchableOpacity>
@@ -98,6 +99,8 @@ export default class SignUp extends React.Component<INavigationProps> {
                 >
                 <Text style={style.footer}>Have an Account? <Text style={style.footerTag}> Sign in</Text></Text>
                 </TouchableOpacity>
+
+                <View style={style.freeSpace}></View>
                </ScrollView>
             </SafeAreaView>
 
@@ -106,6 +109,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             step2?
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -117,7 +121,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                <Text style={style.screenNote}>Tell us who are you</Text>
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:72}]}
+                style = {[style.textInputStyle,{marginTop:hp(7)}]}
                 placeholder = "First Name"
                 placeholderTextColor = "lightgrey"
                 textContentType = "givenName"
@@ -126,7 +130,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:30}]}
+                style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "Last Name"
                 placeholderTextColor = "lightgrey"
                 textContentType = "givenName"
@@ -150,7 +154,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                    </View> 
 
 
-               <View style={{ flexDirection:"row" , marginTop:86, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
+               <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step1:true,step2:false})} 
@@ -175,7 +179,8 @@ export default class SignUp extends React.Component<INavigationProps> {
 
             step3?
             <SafeAreaView style={style.mainContainer}>
-              <ScrollView
+               <ScrollView
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -218,7 +223,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                
 
 
-                <View style={{ flexDirection:"row" , marginTop:100, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
+                <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step1:true,step2:false})} 
@@ -241,7 +246,8 @@ export default class SignUp extends React.Component<INavigationProps> {
             :
             
             <SafeAreaView style={style.mainContainer}>
-              <ScrollView
+               <ScrollView
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -281,7 +287,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                
 
 
-                <View style={{ flexDirection:"row" , marginTop:100, marginLeft:65, marginBottom:50, width:225, alignItems:"center",justifyContent:"space-between"}}>
+                <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step1:true,step2:false})} 

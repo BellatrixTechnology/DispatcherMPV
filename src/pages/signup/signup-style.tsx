@@ -75,80 +75,153 @@ export const style = StyleSheet.create({
   //   fontWeight:"bold"
   // },
 
-   mainContainer: {
+  //  mainContainer: {
+  //   flex:1,
+  //  // paddingHorizontal:wp(10),
+  //   backgroundColor:"#fff"
+  //  },
+  //  logo: {
+  //   height:92,
+  //   width:262,
+  //   marginLeft:47,
+  //   marginTop:130
+  //  },
+  //  screenTitle: {
+  //    fontSize:42,
+  //    //fontWeight:"bold",
+  //    color:"#3C4253",
+  //    marginLeft:65,
+  //    marginTop:22,
+  //    fontFamily:"Gilroy-Bold"
+  //  },
+  //  screenNote: {
+  //   fontSize:30,
+  //   fontFamily:"Gilroy-Medium",
+  //   color:"#C0C5D1",
+  //   marginLeft:65,
+  //   marginTop:15,
+  // },
+  // screenNote1: {
+  //   fontSize:24,
+  //   fontFamily:"Gilroy-Medium",
+  //   color:"#C0C5D1",
+  //   marginTop:18
+  // },
+  // textInputStyle: {
+  //   height:hp(7),
+  //   width:wp(70),
+  //   borderBottomWidth:2,
+  //   marginLeft:66,
+  //   borderColor:"lightgrey",
+  //   fontSize:18,
+  //   fontFamily:"Gilroy-Medium",
+  //   marginTop:72
+  // },
+  // nextButton : {
+  //   height:70,
+  //   width:158,
+  //   borderRadius:35,
+  //   backgroundColor:"#3C4253",
+  //   marginTop:100,
+  //   marginLeft:65,
+  //   justifyContent:"center",
+  //   alignItems:"center",
+  //   elevation:0,
+  // },
+  // footerContainer: {
+  //   marginTop:63,
+  //   marginLeft:66,
+  //  // marginBottom:30
+  // },
+  // footer: {
+  //   fontSize:20,
+  //   fontFamily:"Gilroy-Medium",
+  //   color:"lightgrey",
+  // },
+  // footerTag: {
+  //   color:"#3C4253",
+  //   fontSize:20,
+  //   fontFamily:"Gilroy-Medium",
+  // }, 
+
+  mainContainer: {
     flex:1,
-   // paddingHorizontal:wp(10),
-    backgroundColor:"#fff"
+    backgroundColor:"#fff",
+    justifyContent:"center"
+//    borderWidth:1
    },
    logo: {
-    height:92,
+    height:hp(8),
     width:262,
-    marginLeft:47,
-    marginTop:130
+    marginLeft:-12,
+   // marginTop:130
    },
    screenTitle: {
-     fontSize:42,
+     fontSize:hp(5.5),
      //fontWeight:"bold",
      color:"#3C4253",
-     marginLeft:65,
-     marginTop:22,
+     //marginLeft:65,
+     marginTop:hp(2.5),
      fontFamily:"Gilroy-Bold"
    },
    screenNote: {
-    fontSize:30,
+    fontSize:hp(3.8),
     fontFamily:"Gilroy-Medium",
     color:"#C0C5D1",
-    marginLeft:65,
-    marginTop:15,
+    //marginLeft:65,
+    marginTop:hp(1.5),
   },
   screenNote1: {
-    fontSize:24,
+    fontSize:hp(4),
     fontFamily:"Gilroy-Medium",
     color:"#C0C5D1",
-    marginTop:18
+    marginTop:hp(2)
   },
   textInputStyle: {
     height:hp(7),
     width:wp(70),
     borderBottomWidth:2,
-    marginLeft:66,
+    //marginLeft:66,
     borderColor:"lightgrey",
     fontSize:18,
     fontFamily:"Gilroy-Medium",
-    marginTop:72
+    //marginTop:hp(10)
   },
   nextButton : {
-    height:70,
+    height:hp(8.5),
     width:158,
-    borderRadius:35,
+    borderRadius:hp(4.25),
     backgroundColor:"#3C4253",
-    marginTop:100,
-    marginLeft:65,
+    marginTop:hp(11),
+    //marginLeft:65,
     justifyContent:"center",
     alignItems:"center",
-    elevation:0,
+    elevation:1,
   },
   footerContainer: {
-    marginTop:63,
-    marginLeft:66,
-    marginBottom:30
+    marginTop:hp(8.2),
+   // marginLeft:66,
+   // marginBottom:30
   },
   footer: {
-    fontSize:20,
+    fontSize:hp(2.5),
     fontFamily:"Gilroy-Medium",
     color:"lightgrey",
   },
   footerTag: {
     color:"#3C4253",
-    fontSize:20,
+    fontSize:hp(2.5),
     fontFamily:"Gilroy-Medium",
-  }, 
+  },
+  freeSpace: {
+   // height:156
+  },
   profileContainer: {
     height:hp(10),
     width:wp(75),
     borderWidth:0,
     marginTop:30,
-    marginLeft:66,
+   // marginLeft:66,
     flexDirection:"row",
     alignItems:"center"
   },
@@ -262,5 +335,8 @@ export const style = StyleSheet.create({
     borderRadius:5,
     justifyContent:"center",
     alignItems:"center"
-  }
+  },
+  // freeSpace: {
+  //   height:156
+  // } 
   });
