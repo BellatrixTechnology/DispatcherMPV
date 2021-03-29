@@ -20,7 +20,8 @@ export default class SignUp extends React.Component<INavigationProps> {
         super(props);
     
         this.state = {
-          step1 : true,
+          step0 : true,
+          step1 : false,
           step2 : false,
           step3 : false,
           step4 : false,
@@ -41,14 +42,69 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
     render(){
-    const {phone,phoneFormated,step1,step2,step3,step4,step5,selectedColor,step6} = this.state
+    const {phone,phoneFormated,step0,step1,step2,step3,step4,step5,selectedColor,step6} = this.state
         return(
+
+          step0?
+          <SafeAreaView style={style.mainContainer}>
+
+          <ScrollView
+          style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
+          showsVerticalScrollIndicator={false}
+          >
+           <Image
+           source = {require('./../../assets/imgs/logo.png')}
+           style = {style.logo}
+           /> 
+
+           <Text style={style.screenTitle}>Sign In</Text>
+           <Text style={style.screenNote}>to start driving</Text>
+
+           <TextInput
+            style = {[style.textInputStyle,{marginTop:hp(7)}]}
+            placeholder = "Email address"
+            placeholderTextColor = "#C0C5D1"
+            textContentType = "emailAddress"
+            keyboardType = "email-address"
+            autoCapitalize = "none"
+            />
+
+           <TextInput
+            style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
+            placeholder = "Password"
+            placeholderTextColor = "#C0C5D1"
+            textContentType = "password"
+            secureTextEntry = {true}
+            />
+
+           <TouchableOpacity
+            style = {style.nextButton}
+            >
+            <MaterialIcons name="arrow-forward" size={30} color={"#fff"}/>
+            </TouchableOpacity>
+
+           
+            <TouchableOpacity
+            //onPress={()=>{this.props.navigation.navigate("signup")}}
+            onPress = { () => this.setState({step1:true,step0:false})}
+            style={style.footerContainer}
+            >
+            <Text style={style.footer}> Don't have an Account? <Text style={style.footerTag}> Sign up</Text></Text>
+            </TouchableOpacity> 
+
+            <View style={style.freeSpace}></View>
+
+          </ScrollView>
+
+        </SafeAreaView>
+        :
             step1?
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
               showsVerticalScrollIndicator={false}
               >
+                <View>
                <Image
                source = {require('./../../assets/imgs/logo.png')}
                style = {style.logo}
@@ -56,11 +112,11 @@ export default class SignUp extends React.Component<INavigationProps> {
 
                <Text style={style.screenTitle}>Sign Up</Text>
                <Text style={style.screenNote}>to start driving</Text>
-
+               </View>
                {/* <TextInput
                 style = {style.textInputStyle}
                 placeholder = "Email address"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "emailAddress"
                 keyboardType = "email-address"
                 autoCapitalize = "none"
@@ -76,25 +132,28 @@ export default class SignUp extends React.Component<INavigationProps> {
                 onChangeFormattedText={(text) => {}}
                 withDarkTheme
                 withShadow
-                autoFocus
-                containerStyle={[style.textInputStyle,{backgroundColor:'#ffffff00',elevation:0,marginTop:hp(10)}]}
-                textInputStyle={{borderWidth:0,height:hp(7),backgroundColor:"#ffffff00"}}
-                textContainerStyle={{height:hp(7),backgroundColor:"#ffffff00"}}
+               // autoFocus
+                containerStyle={[style.textInputStyle,{backgroundColor:'#ffffff00',elevation:0,borderWidth:0,marginTop:hp(7)}]}
+                textInputStyle={{borderWidth:0,height:"100%",backgroundColor:"#ffffff00"}}
+                textContainerStyle={{height:"100%",backgroundColor:"#ffffff00"}}
                 countryPickerButtonStyle={{backgroundColor:"#ffffff00"}}
                 codeTextStyle={{backgroundColor:"#ffffff00"}}
                 />
 
 
+                <View style={{height:hp(9.5)}}></View>
+
+
                <TouchableOpacity
                 onPress = { () => this.setState({step2:true,step1:false})}
-                style = {[style.nextButton,{marginTop:hp(18)}]}
+                style = {[style.nextButton]}
                 >
                 <MaterialIcons name="arrow-forward" size={30} color={"#fff"}/>
                 </TouchableOpacity>
 
 
                 <TouchableOpacity
-                onPress={()=>{this.props.navigation.navigate("login")}}
+                 onPress = { () => this.setState({step0:true,step1:false})}
                 style={style.footerContainer}
                 >
                 <Text style={style.footer}>Have an Account? <Text style={style.footerTag}> Sign in</Text></Text>
@@ -112,10 +171,12 @@ export default class SignUp extends React.Component<INavigationProps> {
               style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
-               <Image
-               source = {require('./../../assets/imgs/logo.png')}
-               style = {style.logo}
-               /> 
+               <View>
+                <Image
+                source = {require('./../../assets/imgs/logo.png')}
+                style = {style.logo}
+                /> 
+               </View>
 
                <Text style={style.screenTitle}>Hello!</Text>
                <Text style={style.screenNote}>Tell us who are you</Text>
@@ -123,7 +184,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                <TextInput
                 style = {[style.textInputStyle,{marginTop:hp(7)}]}
                 placeholder = "First Name"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "givenName"
                 autoCapitalize = "words"
                 />
@@ -132,7 +193,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                <TextInput
                 style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "Last Name"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "givenName"
                 autoCapitalize = "words"
                 />
@@ -154,13 +215,13 @@ export default class SignUp extends React.Component<INavigationProps> {
                    </View> 
 
 
-               <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
+               <View style={{ flexDirection:"row" , marginTop:hp(12), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
                 onPress = { () => this.setState({step1:true,step2:false})} 
                 style = {{}}
                 >
-                <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
+                <MaterialIcons name="arrow-back" size={35} color={"#C0C5D1"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
@@ -194,27 +255,27 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:72}]}
+                style = {[style.textInputStyle,{marginTop:hp(7)}]}
                 placeholder = "Email address"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "emailAddress"
                 keyboardType = "email-address"
                 autoCapitalize = "none"
                 />
 
                <TextInput
-                 style = {[style.textInputStyle,{marginTop:30}]}
+                 style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "Password"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "password"
                 secureTextEntry = {true}
                 />
 
 
                <TextInput
-                 style = {[style.textInputStyle,{marginTop:30}]}
+                 style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "Confirm Password"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "password"
                 secureTextEntry = {true}
                 />
@@ -226,10 +287,10 @@ export default class SignUp extends React.Component<INavigationProps> {
                 <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step1:true,step2:false})} 
+                onPress = { () => this.setState({step2:true,step3:false})} 
                 style = {{}}
                 >
-                <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
+                <MaterialIcons name="arrow-back" size={35} color={"#C0C5D1"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
@@ -261,25 +322,25 @@ export default class SignUp extends React.Component<INavigationProps> {
 
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:72}]}
+                style = {[style.textInputStyle,{marginTop:hp(7)}]}
                 placeholder = "Company name"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 textContentType = "organizationName"
                 autoCapitalize = "words"
                 />
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:30}]}
+                style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "MC number"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 keyboardType = "number-pad"
                 />
 
 
                <TextInput
-                style = {[style.textInputStyle,{marginTop:30}]}
+                style = {[style.textInputStyle,{marginTop:hp(2.5)}]}
                 placeholder = "DOT number"
-                placeholderTextColor = "lightgrey"
+                placeholderTextColor = "#C0C5D1"
                 keyboardType = "number-pad"
                 />
 
@@ -290,10 +351,10 @@ export default class SignUp extends React.Component<INavigationProps> {
                 <View style={{ flexDirection:"row" , marginTop:hp(15), marginBottom:156, width:225, alignItems:"center",justifyContent:"space-between"}}>
 
                 <TouchableOpacity
-                onPress = { () => this.setState({step1:true,step2:false})} 
+                onPress = { () => this.setState({step3:true,step4:false})} 
                 style = {{}}
                 >
-                <MaterialIcons name="arrow-back" size={35} color={"lightgrey"}/>
+                <MaterialIcons name="arrow-back" size={35} color={"#C0C5D1"}/>
                 </TouchableOpacity> 
 
                 <TouchableOpacity
@@ -326,7 +387,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="lightgrey"/> 
+                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/> 
                     <Text style={style.buttonTitle}>upload</Text>   
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Rate confirmation</Text>
@@ -336,7 +397,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="lightgrey"/>  
+                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>  
                     <Text style={style.buttonTitle}>upload</Text>    
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Bill of ABC</Text>
@@ -346,7 +407,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="lightgrey"/>   
+                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>   
                     <Text style={style.buttonTitle}>upload</Text>   
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Proof of delivery</Text>
@@ -374,7 +435,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                animationOutTiming={500}
                style={{flex:1,justifyContent:"center",margin:0}}
                >
-               <View style={[style.modal,{height:600}]}>
+               <View style={[style.modal]}>
                 
                 <Text style = {[style.modalTitle,{marginTop:25}]}>Welcome!</Text> 
 
@@ -496,6 +557,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
                 <TouchableOpacity
                 style={style.submitButton}
+                onPress = { () => this.setState({step6:false,step0:true})}
                 >
                 <Text style={style.submitButtonTxt}>Save</Text>    
                 </TouchableOpacity>

@@ -16,7 +16,7 @@ export const style = StyleSheet.create({
    logo: {
     height:hp(8),
     width:262,
-    marginLeft:-12,
+    //marginLeft:-12,
    // marginTop:130
    },
    screenTitle: {
@@ -38,6 +38,7 @@ export const style = StyleSheet.create({
     height:hp(7),
     width:wp(70),
     borderBottomWidth:2,
+    borderWidth:1,
     //marginLeft:66,
     borderColor:"lightgrey",
     fontSize:18,

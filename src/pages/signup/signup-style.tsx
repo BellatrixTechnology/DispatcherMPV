@@ -26,13 +26,13 @@ export const style = StyleSheet.create({
   //  screenNote: {
   //   fontSize:32,
   //   fontWeight:"bold",
-  //   color:"lightgrey",
+  //   color:"#C0C5D1",
   //   marginBottom:hp(8)
   // },
   // screenNote1: {
   //   fontSize:26,
   //   fontWeight:"bold",
-  //   color:"lightgrey",
+  //   color:"#C0C5D1",
   //   marginBottom:hp(5),
   //   marginTop:hp(2)
   // },
@@ -41,7 +41,7 @@ export const style = StyleSheet.create({
   //   width:wp(75),
   //   borderBottomWidth:2,
   //   marginTop:hp(3),
-  //   borderColor:"lightgrey",
+  //   borderColor:"#C0C5D1",
   //   fontSize:16,
   //   fontWeight:"bold"
   // },
@@ -66,7 +66,7 @@ export const style = StyleSheet.create({
   // footer: {
   //   fontSize:18,
   //   fontWeight:"bold",
-  //   color:"lightgrey",
+  //   color:"#C0C5D1",
   //   marginTop:hp(5)
   // },
   // footerTag: {
@@ -112,7 +112,7 @@ export const style = StyleSheet.create({
   //   width:wp(70),
   //   borderBottomWidth:2,
   //   marginLeft:66,
-  //   borderColor:"lightgrey",
+  //   borderColor:"#C0C5D1",
   //   fontSize:18,
   //   fontFamily:"Gilroy-Medium",
   //   marginTop:72
@@ -136,7 +136,7 @@ export const style = StyleSheet.create({
   // footer: {
   //   fontSize:20,
   //   fontFamily:"Gilroy-Medium",
-  //   color:"lightgrey",
+  //   color:"#C0C5D1",
   // },
   // footerTag: {
   //   color:"#3C4253",
@@ -151,9 +151,10 @@ export const style = StyleSheet.create({
 //    borderWidth:1
    },
    logo: {
-    height:hp(8),
-    width:262,
-    marginLeft:-12,
+    height:hp(10),
+    width:hp(7.5),
+    //backgroundColor:"blue"
+    //marginLeft:-12,
    // marginTop:130
    },
    screenTitle: {
@@ -161,7 +162,7 @@ export const style = StyleSheet.create({
      //fontWeight:"bold",
      color:"#3C4253",
      //marginLeft:65,
-     marginTop:hp(2.5),
+     marginTop:hp(1.5),
      fontFamily:"Gilroy-Bold"
    },
    screenNote: {
@@ -179,10 +180,11 @@ export const style = StyleSheet.create({
   },
   textInputStyle: {
     height:hp(7),
-    width:wp(70),
-    borderBottomWidth:2,
+    width:wp(80),
+    borderBottomWidth:1.5,
+    borderWidth:0,
     //marginLeft:66,
-    borderColor:"lightgrey",
+    borderColor:"#C0C5D180",
     fontSize:18,
     fontFamily:"Gilroy-Medium",
     //marginTop:hp(10)
@@ -206,7 +208,7 @@ export const style = StyleSheet.create({
   footer: {
     fontSize:hp(2.5),
     fontFamily:"Gilroy-Medium",
-    color:"lightgrey",
+    color:"#C0C5D1",
   },
   footerTag: {
     color:"#3C4253",
@@ -217,10 +219,10 @@ export const style = StyleSheet.create({
    // height:156
   },
   profileContainer: {
-    height:hp(10),
+    height:hp(7),
     width:wp(75),
     borderWidth:0,
-    marginTop:30,
+    marginTop:hp(5.5),
    // marginLeft:66,
     flexDirection:"row",
     alignItems:"center"
@@ -229,13 +231,13 @@ export const style = StyleSheet.create({
     height:66,
     width:66,
     borderRadius:33,
-    backgroundColor:"lightgrey"
+    backgroundColor:"#C0C5D1"
   },
   imageView1: {
     height:102,
     width:102,
     borderRadius:51,
-    backgroundColor:"lightgrey",
+    backgroundColor:"#C0C5D1",
     marginTop : 30,
     elevation:5
   },
@@ -246,13 +248,14 @@ export const style = StyleSheet.create({
   },
   modal: {
     backgroundColor:"#fff",
-    width:350,
-    height:574,
+    width:wp(90),
+    //height:574,
     alignSelf:"center",
     borderRadius:hp(5),
     paddingHorizontal:35,
     //justifyContent:"center",
-    alignItems:"center"
+    alignItems:"center",
+    
   },
   modalTitle: {
     alignSelf : "center",
@@ -288,7 +291,7 @@ export const style = StyleSheet.create({
     borderRadius:5,
     justifyContent:"center",
     alignItems:"center",
-    borderColor:"lightgrey"
+    borderColor:"#C0C5D1"
   },
   buttonTitle: {
     fontSize:10,

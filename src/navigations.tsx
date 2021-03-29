@@ -25,7 +25,7 @@ export default class nav extends Component {
         super(props);
        this.state={
         checkUser: '',
-        initialRoute: 'login',
+        initialRoute: 'signup',
         activityIndicator: false,
        }  
     }

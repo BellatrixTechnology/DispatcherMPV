@@ -25,7 +25,7 @@ export default class Login extends React.Component<INavigationProps> {
             <SafeAreaView style={style.mainContainer}>
 
               <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
+              style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:1}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -64,7 +64,7 @@ export default class Login extends React.Component<INavigationProps> {
                 onPress={()=>{this.props.navigation.navigate("signup")}}
                 style={style.footerContainer}
                 >
-                <Text style={style.footer}>Don't have an Account? <Text style={style.footerTag}> Sign up</Text></Text>
+                <Text style={style.footer}>Have an Account? <Text style={style.footerTag}> Sign up</Text></Text>
                 </TouchableOpacity> 
 
                 <View style={style.freeSpace}></View>
