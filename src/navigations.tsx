@@ -7,8 +7,10 @@ import { ActivityIndicator, Alert } from 'react-native';
 import { heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 //Screens
-import Login from './pages/login/login';
+import Login from './pages/chat/chat';
 import SignUp from './pages/signup/signup';
+
+import ButtonTab from "./bottomTab"
 
 
 
@@ -25,7 +27,7 @@ export default class nav extends Component {
         super(props);
        this.state={
         checkUser: '',
-        initialRoute: 'signup',
+        initialRoute: 'bottomtab',
         activityIndicator: false,
        }  
     }
@@ -40,7 +42,7 @@ export default class nav extends Component {
             activityIndicator==false?
             <NavigationContainer >
                 <Stack.Navigator initialRouteName={initialRoute} >
-                    <Stack.Screen name="login" component={Login} options={{ headerShown: false }} />
+                    <Stack.Screen name="bottomtab" component={ButtonTab} options={{ headerShown: false }} />
                     <Stack.Screen name="signup" component={SignUp} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>

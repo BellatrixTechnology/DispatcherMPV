@@ -1,0 +1,6 @@
+module Pods_DispatcherMPV {
+  umbrella header "Pods-DispatcherMPV-umbrella.h"
+
+  export *
+  module * { export * }
+}
