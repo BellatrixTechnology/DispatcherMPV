@@ -174,7 +174,7 @@ export const style = StyleSheet.create({
   },
   screenNote1: {
     fontSize:hp(4),
-    fontFamily:"Gilroy-Medium",
+    fontFamily:"Gilroy-Bold",
     color:"#C0C5D1",
     marginTop:hp(2)
   },
@@ -187,6 +187,7 @@ export const style = StyleSheet.create({
     borderColor:"#C0C5D180",
     fontSize:18,
     fontFamily:"Gilroy-Medium",
+    color:"#3C4253",
     //marginTop:hp(10)
   },
   nextButton : {
@@ -243,8 +244,9 @@ export const style = StyleSheet.create({
   },
   uploadImageTxt: {
     fontSize:18,
-    fontWeight:"bold",
+    //fontWeight:"bold",
     color:"#3C4253",
+    fontFamily:"Gilroy-Bold",
   },
   modal: {
     backgroundColor:"#fff",
@@ -252,7 +254,7 @@ export const style = StyleSheet.create({
     //height:574,
     alignSelf:"center",
     borderRadius:hp(5),
-    paddingHorizontal:35,
+    paddingHorizontal:wp(10),
     //justifyContent:"center",
     alignItems:"center",
     
@@ -261,17 +263,18 @@ export const style = StyleSheet.create({
     alignSelf : "center",
     fontSize : 30,
     fontFamily : "Gilroy-Bold",
-    marginTop : 66,
+    marginTop : hp(5),
     color : "#3C4253"
   },
   modalTxt: {
     fontSize : 16,
     fontFamily: "Gilroy-Medium",
-    marginTop:29
+    marginTop:29,
+    color : "#3C4253"
   },
   buttonsContainer: {
-    height:hp(15),
-    width:290,
+    //height:hp(15),
+    width:"100%",
     borderWidth:0,
     flexDirection:"row",
     alignItems:"center",
@@ -279,48 +282,50 @@ export const style = StyleSheet.create({
     marginTop:60
   },
   buttonContainer : {
-    height:hp(15),
-    width : "30%",
+    height:71,
+    width : 79,
     borderWidth:0,
     justifyContent:"flex-start"
   },
   button : {
     height:hp(10),
     width : "100%",
-    borderWidth:0.5,
+    borderWidth:1,
     borderRadius:5,
     justifyContent:"center",
     alignItems:"center",
-    borderColor:"#C0C5D1"
+    borderColor:"#E3E3E3"
   },
   buttonTitle: {
-    fontSize:10,
+    fontSize:8,
     marginTop:hp(0.5),
-    alignSelf:"center"
+    alignSelf:"center",
+    fontFamily:"Gilroy-Bold",
+    color:"#3C4253"
   },
   submitButton: {
-    height:hp(7),
-    width:wp(40),
+    height:56,
+    width:158,
     backgroundColor:"#0047FF",
     elevation:5,
     justifyContent:"center",
     alignItems:"center",
     alignSelf:"center",
     marginTop : 55,
-    borderRadius:hp(3.5),
+    borderRadius:56/2,
     marginBottom:hp(5)
   },
   submitButtonTxt: {
     fontSize:16,
     color:"#fff",
-    fontWeight:"bold"
+    fontFamily:"Gilroy-Bold",
   },
   title: {
     fontSize:18,
-    fontWeight:"bold",
+    //fontWeight:"bold",
     color:"#3C4253",
-    fontFamily:"Gilroy-Medium",
-    marginTop:40
+    fontFamily:"Gilroy-Bold",
+    marginTop:hp(5)
   },
   colorBoxescontainer: {
     height:hp(5),
@@ -329,7 +334,7 @@ export const style = StyleSheet.create({
     justifyContent:"space-around",
     flexDirection:"row",
     borderWidth:0,
-    marginTop:58
+    marginTop:hp(6)
   },
   colorBox: {
     height:43,

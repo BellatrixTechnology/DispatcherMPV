@@ -32,7 +32,7 @@ export const style = StyleSheet.create({
    headerButtonTxt: {
      fontSize:wp(4.2),
      //fontFamily:"Gilory-Bold",
-     fontFamily:"Gilroy-Medium",
+     fontFamily:"Gilroy-ExtraBold",
      color:"#3C4253"
    },
    headerButton1: {
@@ -66,9 +66,9 @@ export const style = StyleSheet.create({
     marginTop:hp(2),
     paddingTop:hp(4),
     paddingBottom:hp(2),
-    elevation:10,
-    borderRadius:10,
-    backgroundColor:"#fff"
+    borderRadius:8,
+    backgroundColor:"#fff",
+    elevation: 8,
   },
   infoContainer: {
     height:hp(7),
@@ -91,7 +91,7 @@ export const style = StyleSheet.create({
   },
   Name: {
     fontSize:wp(5),
-    fontFamily:"Gilroy-Medium",
+    fontFamily:"Gilroy-ExtraBold",
     color:"#3C4253"
   },
   City: {
@@ -153,16 +153,16 @@ export const style = StyleSheet.create({
     alignSelf:"center",
     borderWidth:0,
     flexDirection:"row",
-    justifyContent:"space-between",
+    justifyContent:"center",
     alignItems:"center"
   },
   shipNoTitle: {
-    fontSize:wp(6),
+    fontSize:wp(5.1),
     fontFamily:"Gilroy-Bold",
     color:"#3C4253"
   },
   shipNo: {
-    fontSize:wp(5),
+    fontSize:wp(4.25),
     fontFamily:"Gilroy-Medium",
     color:"#C0C5D1",
   },
@@ -214,11 +214,18 @@ export const style = StyleSheet.create({
     justifyContent:"center",
     alignItems:"center",
     borderColor:"#C0C5D1",
+    borderStyle:"dashed"
   },
   buttonTitle: {
     fontSize:10,
     marginTop:hp(0.5),
     alignSelf:"center",
-    fontFamily:"Gilroy-Bold"
+    fontFamily:"Gilroy-Bold",
+    color:"#3C4253"
   },
+  to: {
+    fontSize:12,
+    fontFamily:"Gilroy-Medium",
+    color:"#3C4253"
+  }
   });

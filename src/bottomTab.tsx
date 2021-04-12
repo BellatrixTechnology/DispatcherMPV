@@ -12,7 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Chat from './pages/chat/chat';
 import History from './pages/history/history';
@@ -43,16 +43,17 @@ const bottomTab = () => (
                 let iconName;
 
                 if(route.name === "chat") {
-                    return <Ionicons name={'chatbox-outline'} size={22} color={color} /> 
+                    return <Ionicons name={'chatbox-outline'} size={20} color={color} /> 
 
                 } else if(route.name === "history") {
-                    return <Ionicons name={'time-outline'} size={22} color={color} /> 
+                    return <Ionicons name={'time-outline'} size={20} color={color} /> 
                 }
                 else if(route.name === "financial") {
-                    return <EvilIcons name={'chart'} size={28} color={color} />
+                     return <SimpleLineIcons name={'chart'} size={15} color={color} />
+                    // return <Image source = {require('./assets/imgs/finan.png')} style={{height:16,width:17}}/>
                 }
                 else if(route.name === "profile") {
-                    return <Ionicons name={'person-outline'} size={20} color={color} />
+                    return <Ionicons name={'person-outline'} size={18} color={color} />
                 }
                 // else if(route.name === "transection") {
                 //     return iconName = focused ? <View style={{}}><Image source={require('./../src/assets/imgs/logo.png')}/></View> :
@@ -78,13 +79,13 @@ const bottomTab = () => (
                             <View
                                 style={{
                                     //backgroundColor: "#fff",
-                                    height: hp(8),
+                                    height: hp(7.5),
                                     width: hp(8),
                                     //borderRadius: 40,
                                     alignItems: "center",
                                     justifyContent: "flex-end",
                                     //backgroundColor:"black",
-                                    marginTop:hp(1)
+                                    marginTop:hp(2.5)
                                 }}
                             >
                                 
@@ -99,13 +100,13 @@ const bottomTab = () => (
                             <View
                                 style={{
                                     //backgroundColor: "#fff",
-                                    height: hp(8),
+                                    height: hp(7.5),
                                     width: hp(8),
                                     //borderRadius: 40,
                                     alignItems: "center",
                                     justifyContent: "flex-end",
                                     //backgroundColor:"black",
-                                    marginTop:hp(1)
+                                    marginTop:hp(2.5)
                                 }}
                             >
                                 
@@ -126,11 +127,13 @@ const bottomTab = () => (
         })}
         tabBarOptions={{
             showLabel:true,
-            labelStyle:{fontFamily:"Gilroy-Medium",fontSize:12},
+            labelStyle:{fontFamily:"Gilroy-Bold",fontSize:12},
             activeTintColor: "#0047FF",
             inactiveTintColor: "#C0C5D1",
             style:{height:hp(10),elevation:0,borderTopWidth:0},
-            tabStyle: {borderWidth:0,height:hp(5),alignSelf:"center",marginTop:-hp(1)}
+            tabStyle: {borderWidth:0,height:hp(5),alignSelf:"center",marginTop:-hp(1)},
+            keyboardHidesTabBar: true
+              
         }}
     >
         <Tab.Screen name="chat" component={Chat} options={{title:"Chat"}}/>

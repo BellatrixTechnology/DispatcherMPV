@@ -27,7 +27,7 @@ export default class SignUp extends React.Component<INavigationProps> {
           step4 : false,
           step5 : false,
           step6 : false,
-          selectedColor : "#0047FF"
+          selectedColor : "#0147FF"
         };
     } 
 
@@ -49,7 +49,7 @@ export default class SignUp extends React.Component<INavigationProps> {
           <SafeAreaView style={style.mainContainer}>
 
           <ScrollView
-          style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
+          style={{height:hp(80),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
           showsVerticalScrollIndicator={false}
           >
            <Image
@@ -101,7 +101,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             step1?
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
+              style={{height:hp(80),marginTop:hp(12),alignSelf:"center",borderWidth:0}}
               showsVerticalScrollIndicator={false}
               >
                 <View>
@@ -134,10 +134,10 @@ export default class SignUp extends React.Component<INavigationProps> {
                 withShadow
                // autoFocus
                 containerStyle={[style.textInputStyle,{backgroundColor:'#ffffff00',elevation:0,borderWidth:0,marginTop:hp(7)}]}
-                textInputStyle={{borderWidth:0,height:"100%",backgroundColor:"#ffffff00"}}
-                textContainerStyle={{height:"100%",backgroundColor:"#ffffff00"}}
+                textInputStyle={{borderWidth:0,height:hp(7),backgroundColor:"#ffffff00", color:"#3C4253",fontFamily:"Gilroy-Medium"}}
+                textContainerStyle={{height:hp(7),backgroundColor:"#ffffff00",borderWidth:0}}
                 countryPickerButtonStyle={{backgroundColor:"#ffffff00"}}
-                codeTextStyle={{backgroundColor:"#ffffff00"}}
+                codeTextStyle={{backgroundColor:"#ffffff00", color:"#3C4253",fontFamily:"Gilroy-Medium"}}
                 />
 
 
@@ -168,7 +168,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             step2?
             <SafeAreaView style={style.mainContainer}>
               <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
+              style={{height:hp(80),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <View>
@@ -241,7 +241,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             step3?
             <SafeAreaView style={style.mainContainer}>
                <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
+              style={{height:hp(80),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -308,7 +308,7 @@ export default class SignUp extends React.Component<INavigationProps> {
             
             <SafeAreaView style={style.mainContainer}>
                <ScrollView
-              style={{height:hp(75),marginTop:hp(12),alignSelf:"center"}}
+              style={{height:hp(80),marginTop:hp(12),alignSelf:"center"}}
               showsVerticalScrollIndicator={false}
               >
                <Image
@@ -375,6 +375,7 @@ export default class SignUp extends React.Component<INavigationProps> {
                animationInTiming={400}
                animationOutTiming={500}
                style={{flex:1,justifyContent:"center",margin:0}}
+               backdropColor = "#00000080"
                >
                <View style={style.modal}>
                  <Text style = {style.modalTitle}>Verify Account</Text> 
@@ -387,7 +388,8 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/> 
+                    {/* <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>  */}
+                    <Image source = {require('./../../assets/imgs/arrow-icon.png')}/>
                     <Text style={style.buttonTitle}>upload</Text>   
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Rate confirmation</Text>
@@ -397,7 +399,8 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>  
+                    {/* <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>   */}
+                    <Image source = {require('./../../assets/imgs/arrow-icon.png')}/>
                     <Text style={style.buttonTitle}>upload</Text>    
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Bill of ABC</Text>
@@ -407,7 +410,8 @@ export default class SignUp extends React.Component<INavigationProps> {
                     <TouchableOpacity
                     style={style.button}
                     >
-                    <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>   
+                    {/* <Ionicons name="cloud-upload-outline" size={35} color="#C0C5D1"/>    */}
+                    <Image source = {require('./../../assets/imgs/arrow-icon.png')}/>
                     <Text style={style.buttonTitle}>upload</Text>   
                     </TouchableOpacity>
                     <Text style={style.buttonTitle}>Proof of delivery</Text>
@@ -434,10 +438,11 @@ export default class SignUp extends React.Component<INavigationProps> {
                animationInTiming={400}
                animationOutTiming={500}
                style={{flex:1,justifyContent:"center",margin:0}}
+               backdropColor = "#00000080"
                >
                <View style={[style.modal]}>
                 
-                <Text style = {[style.modalTitle,{marginTop:25}]}>Welcome!</Text> 
+                <Text style = {[style.modalTitle,{marginTop:hp(4)}]}>Welcome!</Text> 
 
                 <View style = {style.imageView1}></View>
 
@@ -449,50 +454,50 @@ export default class SignUp extends React.Component<INavigationProps> {
                 <View style = {style.colorBoxescontainer}>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FFC9C9"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FFC9C9" }]}
+                    onPress = {() => { this.setState({selectedColor : "#ec1b24"})}}
+                    style = {[style.colorBox , { backgroundColor : "#ec1b24" }]}
                     >
-                    {selectedColor == "#FFC9C9" ?   
+                    {selectedColor == "#ec1b24" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#0047FF"})}}
-                    style = {[style.colorBox , { backgroundColor : "#0047FF" }]}
+                    onPress = {() => { this.setState({selectedColor : "#fec80d"})}}
+                    style = {[style.colorBox , { backgroundColor : "#fec80d" }]}
                     >
-                    {selectedColor == "#0047FF" ?   
+                    {selectedColor == "#fec80d" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#C9FDFF"})}}
-                    style = {[style.colorBox , { backgroundColor : "#C9FDFF" }]}
+                    onPress = {() => { this.setState({selectedColor : "#0147FF"})}}
+                    style = {[style.colorBox , { backgroundColor : "#0147FF" }]}
                     >
-                    {selectedColor == "#C9FDFF" ?   
+                    {selectedColor == "#0147FF" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FEF8AA"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FEF8AA" }]}
+                    onPress = {() => { this.setState({selectedColor : "#ff00fe"})}}
+                    style = {[style.colorBox , { backgroundColor : "#ff00fe" }]}
                     >
-                    {selectedColor == "#FEF8AA" ?   
+                    {selectedColor == "#ff00fe" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#AAD4FE"})}}
-                    style = {[style.colorBox , { backgroundColor : "#AAD4FE" }]}
+                    onPress = {() => { this.setState({selectedColor : "#7f7f7f"})}}
+                    style = {[style.colorBox , { backgroundColor : "#7f7f7f" }]}
                     >
-                    {selectedColor == "#AAD4FE" ?   
+                    {selectedColor == "#7f7f7f" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}   
@@ -504,50 +509,50 @@ export default class SignUp extends React.Component<INavigationProps> {
                 <View style = {[style.colorBoxescontainer,{marginTop:hp(2)}]}>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#C9FFCD"})}}
-                    style = {[style.colorBox , { backgroundColor : "#C9FFCD" }]}
+                    onPress = {() => { this.setState({selectedColor : "#fe7f26"})}}
+                    style = {[style.colorBox , { backgroundColor : "#fe7f26" }]}
                     >
-                    {selectedColor == "#C9FFCD" ?   
+                    {selectedColor == "#fe7f26" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FFB194"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FFB194" }]}
+                    onPress = {() => { this.setState({selectedColor : "#23b14d"})}}
+                    style = {[style.colorBox , { backgroundColor : "#23b14d" }]}
                     >
-                    {selectedColor == "#FFB194" ?   
+                    {selectedColor == "#23b14d" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FFC9FB"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FFC9FB" }]}
+                    onPress = {() => { this.setState({selectedColor : "#7c01ff"})}}
+                    style = {[style.colorBox , { backgroundColor : "#7c01ff" }]}
                     >
-                    {selectedColor == "#FFC9FB" ?   
+                    {selectedColor == "#7c01ff" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FEAAAA"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FEAAAA" }]}
+                    onPress = {() => { this.setState({selectedColor : "#865336"})}}
+                    style = {[style.colorBox , { backgroundColor : "#865336" }]}
                     >
-                    {selectedColor == "#FEAAAA" ?   
+                    {selectedColor == "#865336" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                    onPress = {() => { this.setState({selectedColor : "#FB84FF"})}}
-                    style = {[style.colorBox , { backgroundColor : "#FB84FF" }]}
+                    onPress = {() => { this.setState({selectedColor : "#000"})}}
+                    style = {[style.colorBox , { backgroundColor : "#000" }]}
                     >
-                    {selectedColor == "#FB84FF" ?   
+                    {selectedColor == "#000" ?   
                     <Octicons name="check" size={25} color="#fff"/>
                     :
                     null}    

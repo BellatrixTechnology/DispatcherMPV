@@ -27,7 +27,7 @@ export default class nav extends Component {
         super(props);
        this.state={
         checkUser: '',
-        initialRoute: 'bottomtab',
+        //initialRoute: 'signup',
         activityIndicator: false,
        }  
     }

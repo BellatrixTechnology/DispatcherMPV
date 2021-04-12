@@ -65,7 +65,7 @@ export default class History extends React.Component<INavigationProps> {
                 <View style={style.dataContainer}>
                   <View style={style.shipNoContainer}>
                      <Text style={style.shipNoTitle}>Shipment No: <Text style={style.shipNo}>1234-5678</Text></Text> 
-                     <MaterialIcons name="close" size={25} color="#3C4253"/>
+                     {/* <MaterialIcons name="close" size={25} color="#3C4253"/> */}
                   </View>
 
                   <View style={{...style.infoContainer,width:wp(88),borderBottomWidth:0.2,height:hp(10)}}>
@@ -73,7 +73,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={{...style.Name,fontSize:wp(6.5)}}>Miami</Text>
                             <Text style={{...style.City,color:"#3C4253"}}>Florida</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={{...style.Name,fontSize:wp(6.5)}}>Atlanta</Text>
                             <Text style={{...style.City,color:"#3C4253"}}>Georgia</Text> 
@@ -105,7 +105,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Image source={require('./../../assets/imgs/arrow-icon.png')}/>
                             <Text style={style.buttonTitle}>upload</Text>   
                             </TouchableOpacity>
-                            <Text style={{...style.buttonTitle,fontSize:wp(3)}}>Rate confirmation</Text>
+                            <Text style={{...style.buttonTitle,fontSize:wp(2.6)}}>Rate confirmation</Text>
                             </View> 
 
                             <View style = {style.buttonContainer}>
@@ -116,7 +116,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Image source={require('./../../assets/imgs/arrow-icon.png')}/>
                             <Text style={style.buttonTitle}>upload</Text>    
                             </TouchableOpacity>
-                            <Text style={{...style.buttonTitle,fontSize:wp(3)}}>Bill of ABC</Text>
+                            <Text style={{...style.buttonTitle,fontSize:wp(2.6)}}>Bill of ABC</Text>
                             </View>
 
                             <View style = {style.buttonContainer}>
@@ -127,7 +127,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Image source={require('./../../assets/imgs/arrow-icon.png')}/>
                             <Text style={style.buttonTitle}>upload</Text>   
                             </TouchableOpacity>
-                            <Text style={{...style.buttonTitle,fontSize:wp(3)}}>Proof of delivery</Text>
+                            <Text style={{...style.buttonTitle,fontSize:wp(2.6)}}>Proof of delivery</Text>
                             </View> 
                             
                         </View>  
@@ -150,7 +150,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Miami</Text>
                             <Text style={style.City}>Florida</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Atlanta</Text>
                             <Text style={style.City}>Georgia</Text> 
@@ -194,7 +194,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Miami</Text>
                             <Text style={style.City}>Florida</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Atlanta</Text>
                             <Text style={style.City}>Georgia</Text> 
@@ -238,7 +238,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Miami</Text>
                             <Text style={style.City}>Florida</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Atlanta</Text>
                             <Text style={style.City}>Georgia</Text> 
@@ -282,7 +282,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Miami</Text>
                             <Text style={style.City}>Florida</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Atlanta</Text>
                             <Text style={style.City}>Georgia</Text> 
@@ -332,7 +332,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Jan 20</Text>
                             <Text style={style.City}>2021</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Jan 27</Text>
                             <Text style={style.City}>2021</Text> 
@@ -376,7 +376,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Jan 20</Text>
                             <Text style={style.City}>2021</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Jan 27</Text>
                             <Text style={style.City}>2021</Text> 
@@ -420,7 +420,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Jan 20</Text>
                             <Text style={style.City}>2021</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Jan 27</Text>
                             <Text style={style.City}>2021</Text> 
@@ -464,7 +464,7 @@ export default class History extends React.Component<INavigationProps> {
                             <Text style={style.Name}>Jan 20</Text>
                             <Text style={style.City}>2021</Text>
                           </View> 
-                          <Text>to</Text>
+                          <Text style = {style.to}>to</Text>
                           <View style={style.reciverInfo}>
                             <Text style={style.Name}>Jan 27</Text>
                             <Text style={style.City}>2021</Text> 
