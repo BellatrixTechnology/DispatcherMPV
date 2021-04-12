@@ -6506,10 +6506,14 @@ public final class R {
     public static final int notification_tile_bg=0x7f07008f;
     public static final int notify_panel_notification_icon_bg=0x7f070090;
     public static final int redbox_top_border_background=0x7f070091;
-    public static final int src_assets_imgs_logo=0x7f070092;
-    public static final int test_custom_background=0x7f070093;
-    public static final int tooltip_frame_dark=0x7f070094;
-    public static final int tooltip_frame_light=0x7f070095;
+    public static final int src_assets_imgs_arrowicon=0x7f070092;
+    public static final int src_assets_imgs_dp=0x7f070093;
+    public static final int src_assets_imgs_finan=0x7f070094;
+    public static final int src_assets_imgs_logo=0x7f070095;
+    public static final int src_assets_imgs_logob=0x7f070096;
+    public static final int test_custom_background=0x7f070097;
+    public static final int tooltip_frame_dark=0x7f070098;
+    public static final int tooltip_frame_light=0x7f070099;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -6991,9 +6995,12 @@ public final class R {
     public static final int node_modules_nativebase_node_modules_reactnativevectoricons_glyphmaps_zocial=0x7f0e0011;
     public static final int node_modules_nodeemoji_lib_emoji=0x7f0e0012;
     public static final int node_modules_reactnativecountrypickermodal_lib_assets_data_countriesemoji=0x7f0e0013;
-    public static final int node_modules_reactnativevectoricons_glyphmaps_ionicons=0x7f0e0014;
-    public static final int node_modules_reactnativevectoricons_glyphmaps_materialicons=0x7f0e0015;
-    public static final int node_modules_reactnativevectoricons_glyphmaps_octicons=0x7f0e0016;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_evilicons=0x7f0e0014;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_ionicons=0x7f0e0015;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons=0x7f0e0016;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_materialicons=0x7f0e0017;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_octicons=0x7f0e0018;
+    public static final int node_modules_reactnativevectoricons_glyphmaps_simplelineicons=0x7f0e0019;
   }
   public static final class string {
     public static final int abc_action_bar_home_description=0x7f0f0000;
