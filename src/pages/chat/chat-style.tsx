@@ -11,6 +11,84 @@ export const style = StyleSheet.create({
     flex:1,
     backgroundColor:"#0047FF",
    },
+   mainContainer1: {
+     flex:1,
+     backgroundColor:"#fff"
+   },
+   logo: {
+     height:hp(6),
+     width:167,
+     alignSelf:"center",
+     marginTop:hp(4.5)
+   },
+   Title: {
+     fontSize:wp(6),
+     fontFamily:"Gilroy-ExtraBold",
+     color:"#3C4253",
+     alignSelf:"center",
+     marginTop:hp(13.5)
+   },
+   profile: {
+     marginTop:hp(4),
+     height:wp(30),
+     width:wp(30)
+   },
+   profileName: {
+     fontSize:wp(5),
+     fontFamily:"Gilroy-Medium",
+     color:"#3C4253",
+   },
+   profileAbout: {
+     fontSize:11,
+     fontFamily:"Gilroy-Medium",
+     color:"#C0C5D1",
+   },
+   buttonsContainer: {
+     flexDirection:"row",
+     marginTop:hp(2.5),
+     marginBottom:hp(6),
+     borderWidth:0
+   },
+   chatButton: {
+     height:wp(12),
+     width:wp(12),
+     borderRadius:wp(6),
+     borderWidth:0,
+     backgroundColor:"#fff",
+     elevation:5,
+     justifyContent:"center",
+     alignItems:"center"
+   },
+   callButton: {
+    height:wp(12),
+    width:wp(12),
+    borderRadius:wp(6),
+    borderWidth:0,
+    backgroundColor:"#0047FF",
+    elevation:5,
+    marginLeft:wp(6),
+    justifyContent:"center",
+     alignItems:"center"
+   },
+   company: {
+     fontSize:12,
+     fontFamily:"Gilroy-Medium",
+     color:"#C0C5D1",
+     alignSelf:"center",
+     marginTop:hp(12)
+   },
+   profileContainer: {
+     //height:hp(40),
+     width:wp(85),
+     borderWidth:0,
+     borderRadius:25,
+     alignSelf:"center",
+     marginTop:hp(3),
+     backgroundColor:"#fff",
+     //justifyContent:"center",
+     alignItems:"center",
+     elevation:5
+   },
    header: {
     height:hp(15),
     width:wp(100),

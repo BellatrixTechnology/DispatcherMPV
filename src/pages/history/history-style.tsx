@@ -12,6 +12,11 @@ export const style = StyleSheet.create({
     backgroundColor:"#0047FF",
     //alignItems:"center"
    },
+   mainContainer1: {
+    flex:1,
+    backgroundColor:"#fff",
+    //alignItems:"center"
+   },
    header: {
      height:hp(15),
      width:wp(100),
@@ -20,6 +25,165 @@ export const style = StyleSheet.create({
      alignItems:"center",
      flexDirection:"row",
    },
+   header1: {
+    height:hp(15+19.55),
+    width:wp(100),
+    borderWidth:0,
+    justifyContent:"center",
+    alignItems:"center",
+    //flexDirection:"row",
+    backgroundColor:"#0047FF",
+    borderBottomRightRadius:40,
+    borderBottomLeftRadius:40,
+  },
+  header1Part1: {
+    height:hp(15),
+    width:wp(86),
+    borderWidth:0,
+    paddingLeft:wp(1),
+    justifyContent:"flex-end",
+    paddingBottom:hp(1)
+  },
+  dot1: {
+    height:6,
+    width:6,
+    borderRadius:3,
+    backgroundColor:"#FE6545",
+  },
+  late: {
+    fontSize:wp(2.4),
+    fontFamily:"Gilroy-Medium",
+    color:"#fff",
+  },
+  statusContainer: {
+    height:hp(3.5),
+    width:62,
+    borderRadius:hp(3.5/2),
+    //borderWidth:1,
+    backgroundColor:"#163DC8",
+    justifyContent:"space-around",
+    alignItems:"center",
+    flexDirection:"row",
+    paddingHorizontal:wp(2.5)
+  },
+  header1Part2: {
+    height:hp(19.55),
+    width:wp(86),
+    borderWidth:0
+  },
+  header1Part21: {
+    height:hp(8.6),
+    width:wp(86),
+    borderWidth:0,
+    paddingLeft:wp(1)
+  },
+  tasksContainer: {
+    //height:hp(30),
+    width:wp(84),
+    borderWidth:0,
+    alignSelf:"center",
+    marginTop:hp(8)
+  },
+  taskContainer: {
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems:"center",
+    borderWidth:0,
+    marginTop:hp(1.5)
+  },
+  taskTitle: {
+    fontSize:wp(3),
+    fontFamily:"Gilroy-Medium",
+    color:"#3C425350"
+  },
+  task: {
+    fontSize:wp(3.2),
+    fontFamily:"Gilroy-Medium",
+    color:"#3C4253"
+  },
+  total: {
+    fontSize:wp(3.4),
+    fontFamily:"Gilroy-Medium",
+    color:"#3C4253"
+  },
+  totalAmountTitle: {
+    fontSize:wp(2.6),
+    fontFamily:"Gilroy-Bold",
+    color:"#3C425350"
+  },
+  dummyText: {
+    fontSize:wp(2.4),
+    fontFamily:"Gilroy-Regular",
+    color:"#07070775"
+  },
+  totalAmountContainer: {
+    //height:hp(10),
+    width:wp(86),
+    borderTopWidth:0.5,
+    alignSelf:"center",
+    marginTop:hp(4),
+    borderColor:"#70707089",
+    flexDirection:"row",
+    justifyContent:"space-between",
+    alignItems:"center",
+    paddingVertical:hp(2)
+  },
+  paid: {},
+  totalAmount: {},
+  design: {
+    fontSize:wp(6),
+    fontFamily:"Gilroy-Bold",
+    color:"#fff"
+  },
+  designNo: {
+    fontSize: wp(3),
+    fontFamily:"Gilroy-Medium",
+    color:"#FFFFFF50",
+    marginTop: hp(1)
+  },
+  invoiceDetailsCard: {
+    height:hp(15),
+    width:wp(86),
+    backgroundColor:"#fff",
+    borderRadius:10,
+    elevation:10,
+    flexDirection:"row",
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  invoiceDetailsContainer: {
+    height:hp(11.4),
+    width:"45%",
+    borderWidth:0,
+    padding:hp(1),
+    justifyContent:"space-evenly",
+    paddingHorizontal:hp(1.5)
+  },
+  invoiceAmountContainer: {
+    height:hp(11.4),
+    width:"45%",
+    //borderWidth:1,
+    padding:hp(1),
+    justifyContent:"space-evenly",
+    paddingHorizontal:hp(2),
+    borderRadius:10,
+    backgroundColor:"#F5F8FD"
+  },
+  invoiceFor: {
+    fontSize:wp(2.2),
+    fontFamily:"Gilroy-Medium",
+    color:"#3C425365"
+  },
+  invoiceName: {
+    fontSize:wp(3.5),
+    fontFamily:"Gilroy-Bold",
+    color:"#3C4253"
+  },
+  invoiceAddress: {
+    fontSize:wp(2.5),
+    fontFamily:"Gilroy-Bold",
+    color:"#3C425365"
+  },
    headerButton: {
      height:hp(6),
      width:wp(30),
@@ -165,6 +329,18 @@ export const style = StyleSheet.create({
     fontSize:wp(4.25),
     fontFamily:"Gilroy-Medium",
     color:"#C0C5D1",
+  },
+  dot: {
+    height:hp(1.15),
+    width:hp(1.15),
+    backgroundColor:"#FE6545",
+    borderRadius:hp(1.15/2)
+  },
+  date: {
+    fontSize:wp(2.2),
+    fontFamily:"Gilroy-Medium",
+    color:"#3C425350",
+    marginLeft:wp(1)
   },
   dmtnContainer: {
     height:hp(10),
