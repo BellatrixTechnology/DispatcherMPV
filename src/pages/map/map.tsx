@@ -22,7 +22,7 @@ export default class Map extends React.Component<INavigationProps> {
     render(){
         return(
          <SafeAreaView style={style.mainContainer}>
-                <View style={{...style.header,justifyContent:"space-between",width:wp(88),alignSelf:"center"}}>
+                {/* <View style={{...style.header,justifyContent:"space-between",width:wp(88),alignSelf:"center"}}>
                    
                    <MaterialIcons name="chevron-left" size={25}/>    
 
@@ -80,7 +80,7 @@ export default class Map extends React.Component<INavigationProps> {
 
                     <Text style={{...style.disAndRate,alignSelf:"center",marginVertical:hp(2)}}>See More</Text>
                   </View> 
-               </View>
+               </View> */}
          </SafeAreaView>
         )
     }  

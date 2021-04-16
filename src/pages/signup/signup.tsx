@@ -562,7 +562,7 @@ export default class SignUp extends React.Component<INavigationProps> {
 
                 <TouchableOpacity
                 style={style.submitButton}
-                onPress = { () => this.setState({step6:false,step0:true})}
+                onPress = { () => this.props.navigation.navigate("bottomtab")}
                 >
                 <Text style={style.submitButtonTxt}>Save</Text>    
                 </TouchableOpacity>
