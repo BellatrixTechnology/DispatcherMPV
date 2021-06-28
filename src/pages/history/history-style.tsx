@@ -26,7 +26,7 @@ export const style = StyleSheet.create({
      flexDirection:"row",
    },
    header1: {
-    height:hp(15+19.55),
+    height:hp(25),
     width:wp(100),
     borderWidth:0,
     justifyContent:"center",
@@ -139,7 +139,7 @@ export const style = StyleSheet.create({
     fontSize: wp(3),
     fontFamily:"Gilroy-Medium",
     color:"#FFFFFF50",
-    marginTop: hp(1)
+    marginBottom: hp(1),
   },
   invoiceDetailsCard: {
     height:hp(15),
@@ -306,6 +306,16 @@ export const style = StyleSheet.create({
     alignItems:"center",
     elevation:5
   },
+  backButton1: {
+    height:hp(5),
+    width:hp(5),
+    borderRadius:hp(2.75),
+    backgroundColor:"#fff",
+    justifyContent:"center",
+    alignItems:"center",
+    elevation:5,
+    marginBottom:hp(1)
+  },
   heading: {
     fontSize:wp(6),
     color:"#fff",
@@ -403,5 +413,19 @@ export const style = StyleSheet.create({
     fontSize:12,
     fontFamily:"Gilroy-Medium",
     color:"#3C4253"
+  },
+  payButton: {
+    height:hp(5),
+    width:wp(25),
+    backgroundColor:"#0047FF",
+    elevation:5,
+    borderRadius:hp(2.5),
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  payButtonTxt: {
+    fontSize:16,
+    fontFamily:"Gilroy-Bold",
+    color:"#fff"
   }
   });

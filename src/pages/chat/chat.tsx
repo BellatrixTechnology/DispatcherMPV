@@ -67,7 +67,7 @@ export default class Chat extends React.Component<INavigationProps> {
               <View style={{...style.header,justifyContent:"space-between",width:wp(88),alignSelf:"center"}}>
                    <View style={style.dpAndNameContainer}>
                    <TouchableOpacity 
-                   //onPress = { () => this.setState({profile:true})}
+                   onPress = { () => this.setState({profile:true})}
                    style={style.dp}>
                      <Image
                      source = {require('./../../assets/imgs/dp.webp')}

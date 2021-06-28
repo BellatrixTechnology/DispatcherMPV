@@ -27,8 +27,14 @@ export default class History extends React.Component<INavigationProps> {
         return(
              invoiceDetails?
               <SafeAreaView style = { style.mainContainer1 }>
-                <View style = { style.header1 }>
-                  <View style = { style.header1Part1 }>
+                <View style = {{...style.header1,justifyContent:"flex-end"}}>
+                  {/* <View style = { style.header1Part1 }> */}
+                    {/* <TouchableOpacity
+                    onPress = {() => {this.setState({invoiceDetails:false})}}
+                    style={style.backButton1}
+                    >
+                    <MaterialIcons name="chevron-left" size={25}/>  
+                    </TouchableOpacity>
                     <View style = {style.statusContainer}>
                       <View style = {style.dot1}></View>
                       <Text style = {style.late}>LATE</Text>
@@ -38,7 +44,26 @@ export default class History extends React.Component<INavigationProps> {
                     <View style = { style.header1Part21 }>
                       <Text style = { style.design }>8 Design Co.</Text>
                       <Text style = { style.designNo }>IV By D9899 23</Text>
+                    </View> */}
+
+                  <View style={{...style.header,alignSelf:"center",flexDirection:"column"}}>
+                    <View style={{flexDirection:"row",justifyContent:"space-between",alignItems:"center",width:wp(88)}}>
+                    <TouchableOpacity
+                    onPress = {() => {this.setState({invoiceDetails:false})}}
+                    style={style.backButton}
+                    >
+                    <MaterialIcons name="chevron-left" size={25}/>    
+                    </TouchableOpacity>
+
+                    <Text style={style.heading}>8 Design Co.</Text>
+
+                    <TouchableOpacity
+                    style={{}}
+                    >
+                    <MaterialCommunityIcons name="dots-vertical" size={25} color="#fff"/>    
+                    </TouchableOpacity>
                     </View>
+                    <Text style = { style.designNo }>IV By D9899 23</Text>
 
                     <View style = { style.invoiceDetailsCard }>
                       <View style = { style.invoiceDetailsContainer }>
@@ -55,7 +80,9 @@ export default class History extends React.Component<INavigationProps> {
                         </View>
                       </View>
                     </View>
-                  </View>
+                   </View>
+
+                  {/* </View> */}
                 </View>
 
                 <View style = { style.tasksContainer}>
@@ -105,6 +132,12 @@ export default class History extends React.Component<INavigationProps> {
                     <Text style = {style.status}>PAID</Text>
                     <Text style = {style.dummyText}>is simply dummy text of the printing</Text>
                     <Text style = {style.dummyText}>and typesetting industry. Lorem </Text>
+                    {/* <TouchableOpacity
+                    onPress = {()=> {this.setState({invoiceDetails:false})}}
+                    style={style.payButton}
+                    >
+                    <Text style={style.payButtonTxt}>Pay Now</Text>  
+                    </TouchableOpacity> */}
                   </View>
                   <View style = {style.totalAmount}>
                     <Text style = {style.totalAmountTitle}>TOTAL AMOUNT</Text>
@@ -277,6 +310,147 @@ export default class History extends React.Component<INavigationProps> {
 
                    </TouchableOpacity>
 
+
+                   <TouchableOpacity
+                   onPress={()=>{this.setState({loadsDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Miami</Text>
+                            <Text style={style.City}>Florida</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Atlanta</Text>
+                            <Text style={style.City}>Georgia</Text> 
+                          </View>
+                        </View>  
+                        
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Date</Text>
+                            <Text style={style.value}>May 19, 2020</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Shipment No</Text>
+                            <Text style={style.value}>1234-5678</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>Completed</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Load Rate</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
+
+                   <TouchableOpacity
+                   onPress={()=>{this.setState({loadsDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Miami</Text>
+                            <Text style={style.City}>Florida</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Atlanta</Text>
+                            <Text style={style.City}>Georgia</Text> 
+                          </View>
+                        </View>  
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Date</Text>
+                            <Text style={style.value}>May 19, 2020</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Shipment No</Text>
+                            <Text style={style.value}>1234-5678</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>Completed</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Load Rate</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
+                   <TouchableOpacity
+                   onPress={()=>{this.setState({loadsDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Miami</Text>
+                            <Text style={style.City}>Florida</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Atlanta</Text>
+                            <Text style={style.City}>Georgia</Text> 
+                          </View>
+                        </View>  
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Date</Text>
+                            <Text style={style.value}>May 19, 2020</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Shipment No</Text>
+                            <Text style={style.value}>1234-5678</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>Completed</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Load Rate</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
                    </ScrollView>
                    :
                    <ScrollView
@@ -285,7 +459,146 @@ export default class History extends React.Component<INavigationProps> {
                    >
 
                    <TouchableOpacity 
-                  // onPress = { () => {this.setState({invoiceDetails:true})}}
+                   onPress = { () => {this.setState({invoiceDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Jan 20</Text>
+                            <Text style={style.City}>2021</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Jan 27</Text>
+                            <Text style={style.City}>2021</Text> 
+                          </View>
+                        </View>  
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Company</Text>
+                            <Text style={style.value}>ABC logistice, LLC</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Invoice No</Text>
+                            <Text style={style.value}>1234-5678-1234</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>PAID</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Invoice Amount</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
+
+                   <TouchableOpacity 
+                   onPress = { () => {this.setState({invoiceDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Jan 20</Text>
+                            <Text style={style.City}>2021</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Jan 27</Text>
+                            <Text style={style.City}>2021</Text> 
+                          </View>
+                        </View>  
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Company</Text>
+                            <Text style={style.value}>ABC logistice, LLC</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Invoice No</Text>
+                            <Text style={style.value}>1234-5678-1234</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>PAID</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Invoice Amount</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
+                   <TouchableOpacity 
+                   onPress = { () => {this.setState({invoiceDetails:true})}}
+                   style={style.card}>
+                       <View style={style.infoContainer}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.Name}>Jan 20</Text>
+                            <Text style={style.City}>2021</Text>
+                          </View> 
+                          <Text style = {style.to}>to</Text>
+                          <View style={style.reciverInfo}>
+                            <Text style={style.Name}>Jan 27</Text>
+                            <Text style={style.City}>2021</Text> 
+                          </View>
+                        </View>  
+
+                        <Image
+                          source={require('./../../assets/imgs/logo.png')}
+                          style={style.logo}
+                          />
+
+                        <View style={[style.infoContainer,{borderBottomWidth:0.2}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.title}>Company</Text>
+                            <Text style={style.value}>ABC logistice, LLC</Text>
+                          </View> 
+                          
+                          <View style={style.reciverInfo}>
+                            <Text style={style.title}>Invoice No</Text>
+                            <Text style={style.value}>1234-5678-1234</Text> 
+                          </View>
+                       </View>
+
+
+                       <View style={[style.infoContainer,{height:hp(6)}]}>
+                          <View style={style.senderInfo}>
+                            <Text style={style.status}>PAID</Text>
+                          </View> 
+                          
+                          <View style={{...style.reciverInfo,flexDirection:"row",alignItems:"flex-end"}}>
+                            <Text style={style.type}>Invoice Amount</Text>
+                            <Text style={style.amount}>$1,600</Text>
+                          </View>
+                       </View>
+
+                   </TouchableOpacity>
+
+                   <TouchableOpacity 
+                   onPress = { () => {this.setState({invoiceDetails:true})}}
                    style={style.card}>
                        <View style={style.infoContainer}>
                           <View style={style.senderInfo}>
